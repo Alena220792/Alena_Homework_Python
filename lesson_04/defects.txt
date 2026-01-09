@@ -1,0 +1,38 @@
+1. В функции capitalize при передаче None происходит ошибка AttributeError: 'NoneType' object has no attribute 'capitalize'.
+
+	Шаги воспроизведения: 
+        1. В функции capitalize передать на вход тип: None
+        2. Вызвать функцию StringUtils().capitalize(None)
+
+	Ожидаемый результат: При передаче на вход типа "None" в функции capitalize должно было вернуться "None"
+
+	Фактический результат: string в этот момент — это не строка, а «ничего» (None), Python не находит такого метода и аварийно завершает 
+    работу и выдает ошибку AttributeError: 'NoneType' object has no attribute 'capitalize'.
+
+    Окружение: версия Python 3.14.0, версия Pytest 9.0.2.
+
+2. В функции trim при передаче None происходит ошибка AttributeError: 'NoneType' object has no attribute 'startswith'.
+
+	Шаги воспроизведения: 
+        1. В функции trim передать на вход тип: None
+        2. Вызвать функцию StringUtils().trim(None)
+
+	Ожидаемый результат: При передаче на вход типа "None" в функции trim должно было вернуться "None"
+
+	Фактический результат: программа пытается запустить метод .startswith(), но у этого метода нет типа "None".
+    Python аварийно завершает работу и выдает ошибку AttributeError: 'NoneType' object has no attribute 'startswith'.
+
+    Окружение: версия Python 3.14.0, версия Pytest 9.0.2.
+
+3. В функции contains при передаче None происходит ошибка TypeError: index() argument 1 must be str, not None.
+
+	Шаги воспроизведения: 
+        1. В функции contains передать на вход в symbol тип: None
+        2. Вызвать функцию StringUtils().contains("Home", None)
+
+	Ожидаемый результат: При передаче на вход в symbol типа "None" в функции contains должно было вернуться "None"
+
+	Фактический результат: программа пытается запустить метод .index(symbol), но у этого метода нет типа "None", так как это строковый метод.
+    Python аварийно завершает работу и выдает ошибку типа TypeError: index() argument 1 must be str, not None.
+
+    Окружение: версия Python 3.14.0, версия Pytest 9.0.2.
