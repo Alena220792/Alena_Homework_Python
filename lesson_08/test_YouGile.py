@@ -2,7 +2,7 @@ import pytest
 from .YouGileApi import YouGileApi
 
 # вставить токен для работы тестов
-auth_token = ""
+auth_token = "IyFvHLg8NPVNyav86XMPYBVOMGtCsR9HtWcHc8jLp8DHr239LAvUsx3WcZbLXqUG"
 base_url = "https://ru.yougile.com/api-v2/"
 
 api = YouGileApi(base_url)
