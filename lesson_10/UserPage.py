@@ -34,7 +34,7 @@ class UserPage:
 
         print("Кнопки нажаты успешно!")
 
-        
+         
     @allure.step("Получение итоговой стоимости заказа")
     def total(self)  -> str:
         """
