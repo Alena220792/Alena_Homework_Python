@@ -16,7 +16,7 @@
 - Все шаги теста размечаются с помощью `@allure.step` или `with allure.step` для улучшения читаемости отчетов.
 - Используются декораторы `@allure.epic`, `@allure.feature`, `@allure.story`, `@allure.title`, `@allure.description`, `@allure.severity`  для максимальной прозрачности отчета.
 
----
+--- 
 
 ## Инструкция по запуску тестов для формирования отчета Allure
 

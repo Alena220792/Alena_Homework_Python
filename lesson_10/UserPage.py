@@ -5,14 +5,20 @@ import allure
 
 class UserPage:
 
-    def __init__(self, driver):
+    def __init__(self, driver) -> None:
+        """
+        Инициализация страницы данных пользователя.
+        :param driver: WebDriver - объект драйвера Selenium.
+        :return: None ничего не возвращает
+        """
         with allure.step("Инициализация страницы данных пользователя"):
             self._driver = driver
 
     @allure.step("Заполнение формы данных покупателя")
-    def user(self):
+    def user(self) -> None:
         """
         Заполняет имя, фамилию и почтовый индекс, затем нажимает Continue.
+        :return: None ничего не возвращает
         """
         with allure.step("Ввести имя 'Alena'"):
             first_input = self._driver.find_element(By.ID, "first-name")
@@ -30,9 +36,11 @@ class UserPage:
 
         
     @allure.step("Получение итоговой стоимости заказа")
-    def total(self):
+    def total(self)  -> str:
         """
         Ожидает появления итоговой суммы и возвращает её текст.
+        
+        :return: str - строка с итоговой ценой заказа.
         """
         with allure.step("Ожидание появления элемента с итоговой суммой"):
             waiter = WebDriverWait(self._driver, 10)
