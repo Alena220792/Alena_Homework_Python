@@ -3,12 +3,22 @@ import allure
 
 class MainshopPage:
 
-    def __init__(self, driver):
+    def __init__(self, driver) -> None:
+        """
+        Инициализация главной страницы магазина.
+
+        :param driver: WebDriver — объект драйвера Selenium.
+        :return: None — инициализирует объект и ничего не возвращает.
+        """ 
         with allure.step("Инициализация главной страницы магазина"):
             self._driver = driver
     
     @allure.step("Добавление товаров в корзину и переход к оформлению")
-    def main_shop(self):
+    def main_shop(self) -> None:
+        """
+        Добавляет три товара в корзину и переходит на страницу корзины.
+        :return: None — метод выполняет действия и ничего не возвращает.
+        """
         with allure.step("Добавить в корзину 'Sauce Labs Backpack'"):
             self._driver.find_element(By.ID, "add-to-cart-sauce-labs-backpack").click()
         with allure.step("Добавить в корзину 'Sauce Labs Bolt T-Shirt'"):   

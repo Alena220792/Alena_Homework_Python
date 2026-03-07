@@ -5,11 +5,12 @@ import allure
 
 class CalcPage:
 
-    def __init__(self, driver):
+    def __init__(self, driver)-> None:
         """
         Конструктор класса CalcPage.
 
         :param driver: WebDriver — объект драйвера Selenium.
+        :return: None — инициализирует объект и ничего не возвращает.
         """
         with allure.step("Открытие страницы калькулятора и настройка"):
             self.driver = driver
@@ -18,22 +19,22 @@ class CalcPage:
             self.driver.maximize_window()
 
     @allure.step("Установка задержки {term} секунд")
-    def delay_input(self, term):
+    def delay_input(self, term: str) -> None:
         """
         Устанавливает задержку для выполнения операций на калькуляторе.
 
-        :param term: int — время задержки в секундах.
+        :param term: str — время задержки в секундах.
+        :return: None — метод вводит текст и ничего не возвращает.
         """
         delay_input = self.driver.find_element(By.CSS_SELECTOR, "#delay")
         delay_input.clear()
         delay_input.send_keys(term)
 
     @allure.step("Нажатие кнопок '7 + 8 =' и ожидание результата")
-    def click_num(self):
+    def click_num(self) -> None:
         """
-        Нажимает на несколько кнопок калькулятора по очереди.
-        :param: str — текст на кнопке ( '7', '+', '=').,
-        которые нужно нажать).
+        Нажимает на несколько кнопок калькулятора по очереди,
+        :return: None ничего не возвращает
         """
         with allure.step("Нажатие кнопки '7'"):
             self.driver.find_element(By.XPATH, "//span[text()='7']").click()
@@ -49,7 +50,10 @@ class CalcPage:
             waiter.until(EC.text_to_be_present_in_element((By.CSS_SELECTOR, ".screen"), "15"))
 
     @allure.step("Получение итогового результата с экрана")
-    def result(self):
-        
+    def result(self) -> str:
+        """
+        Считывает текст с экрана калькулятора.
+        :return: str - текстовое значение результата с экрана.
+        """
         result = self.driver.find_element(By.CSS_SELECTOR, ".screen").text
         return result
