@@ -12,7 +12,7 @@ class Cart_shopPage:
         """
         with allure.step("Инициализация страницы корзины"):
             self._driver = driver
-    
+     
     @allure.step("Переход к оформлению заказа (нажатие Checkout)")
     def cart_shop(self) -> None:  
         """

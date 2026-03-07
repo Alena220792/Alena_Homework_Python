@@ -50,7 +50,7 @@ def test_shop(driver) -> None:
             autoriz_page.user_input()
         with allure.step("Ввод пароля пользователя"):
             autoriz_page.login_but()
- 
+  
     with allure.step("Добавление товаров в корзину и переход в нее"):  
         main_shop = MainshopPage(driver)
         main_shop.main_shop()

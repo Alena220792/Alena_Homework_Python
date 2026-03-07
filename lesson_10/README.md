@@ -17,7 +17,7 @@
 - Используются декораторы `@allure.epic`, `@allure.feature`, `@allure.story`, `@allure.title`, `@allure.description`, `@allure.severity`  для максимальной прозрачности отчета.
 
 --- 
-
+ 
 ## Инструкция по запуску тестов для формирования отчета Allure
 
 1. Установите необходимые зависимости:

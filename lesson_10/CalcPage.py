@@ -34,7 +34,7 @@ class CalcPage:
     def click_num(self) -> None:
         """
         Нажимает на несколько кнопок калькулятора по очереди,
-        
+         
         :return: None ничего не возвращает
         """
         with allure.step("Нажатие кнопки '7'"):
