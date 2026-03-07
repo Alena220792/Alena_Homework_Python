@@ -17,6 +17,7 @@ class MainshopPage:
     def main_shop(self) -> None:
         """
         Добавляет три товара в корзину и переходит на страницу корзины.
+        
         :return: None — метод выполняет действия и ничего не возвращает.
         """
         with allure.step("Добавить в корзину 'Sauce Labs Backpack'"):

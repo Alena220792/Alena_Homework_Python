@@ -3,7 +3,7 @@ import allure
 
 
 class AutorizPage:
-
+    
     def __init__(self, driver) -> None:
         """
         Инициализация страницы авторизации.

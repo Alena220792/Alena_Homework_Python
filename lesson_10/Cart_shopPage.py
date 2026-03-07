@@ -17,7 +17,7 @@ class Cart_shopPage:
     def cart_shop(self) -> None:  
         """
         Выполняет переход к странице оформления заказа.
-        
+         
         :return: None — метод выполняет клик и ничего не возвращает.
         """ 
         with allure.step("Поиск и нажатие кнопки 'Checkout'"):
