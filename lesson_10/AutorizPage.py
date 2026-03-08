@@ -7,7 +7,7 @@ class AutorizPage:
     def __init__(self, driver) -> None:
         """
         Инициализация страницы авторизации.
-
+ 
         :param driver: WebDriver — объект драйвера Selenium.
         :return: None — инициализирует объект и ничего не возвращает.
         """
